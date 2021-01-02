@@ -1,0 +1,32 @@
+[2021-01-02 21:27:49,406][_server.py:445][ERROR]: Exception calling application: Method not implemented!
+Traceback (most recent call last):
+  File "C:\Users\86186\AppData\Local\Programs\Python\Python36\lib\site-packages\grpc\_server.py", line 435, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "D:\demo\demo_python\opencv_python_code\grpc_opencv\server\proto\opencv_proto\opencv_pb2_grpc.py", line 31, in RunOpenCV
+    raise NotImplementedError('Method not implemented!')
+NotImplementedError: Method not implemented!
+[2021-01-02 21:29:27,372][log.py:15][ERROR]: trace_id: 89444b42-4cfe-11eb-836b-18cf5ea622c6, error_code: -10006, image_url:  opencv reg failed: Traceback (most recent call last):
+  File "D:\demo\demo_python\opencv_python_code\grpc_opencv\server\opencv_rcg.py", line 69, in inference
+    score = np.mean(image_buffer)
+  File "C:\Users\86186\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\fromnumeric.py", line 3118, in mean
+    out=out, **kwargs)
+  File "C:\Users\86186\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\_methods.py", line 75, in _mean
+    ret = umr_sum(arr, axis, dtype, out, keepdims)
+TypeError: cannot perform reduce with flexible type
+
+[2021-01-02 21:29:44,863][log.py:15][ERROR]: trace_id: 93b51ea4-4cfe-11eb-8cd9-18cf5ea622c6, error_code: -10006, image_url:  opencv reg failed: Traceback (most recent call last):
+  File "D:\demo\demo_python\opencv_python_code\grpc_opencv\server\opencv_rcg.py", line 69, in inference
+    score = np.mean(image_buffer)
+  File "C:\Users\86186\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\fromnumeric.py", line 3118, in mean
+    out=out, **kwargs)
+  File "C:\Users\86186\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\_methods.py", line 75, in _mean
+    ret = umr_sum(arr, axis, dtype, out, keepdims)
+TypeError: cannot perform reduce with flexible type
+
+[2021-01-02 21:31:05,073][log.py:15][ERROR]: trace_id: c383f2b0-4cfe-11eb-9aa0-18cf5ea622c6, error_code: -10006, image_url:  opencv reg failed: Traceback (most recent call last):
+  File "D:\demo\demo_python\opencv_python_code\grpc_opencv\server\opencv_rcg.py", line 69, in inference
+    score = np.mean(string_to_cvmat(image_buffer))
+  File "D:\demo\demo_python\opencv_python_code\grpc_opencv\server\utils.py", line 23, in string_to_cvmat
+    nparr = np.formstring(imagebuf, np.uint8)
+AttributeError: module 'numpy' has no attribute 'formstring'
+
