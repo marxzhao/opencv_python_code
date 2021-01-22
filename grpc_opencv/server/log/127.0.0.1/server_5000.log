@@ -47,3 +47,20 @@ AttributeError: module 'numpy' has no attribute 'formstring'
 [2021-01-02 21:31:53,107][server.py:108][INFO]: server ready
 [2021-01-02 21:31:56,090][server.py:92][INFO]: request info: trace_id: e1e8f47e-4cfe-11eb-9274-18cf5ea622c6, client: 127.0.0.1:58241 error_code: 0, cose: 0.022985458374023438, image_url: 
 [2021-01-02 21:32:11,347][server.py:92][INFO]: request info: trace_id: eb030df0-4cfe-11eb-b01f-18cf5ea622c6, client: 127.0.0.1:58244 error_code: 0, cose: 0.01501011848449707, image_url: 
+[2021-01-03 09:32:20,909][server.py:98][INFO]: server init
+[2021-01-03 09:32:20,914][server.py:46][INFO]: OpenCV Servicer init.
+[2021-01-03 09:32:20,917][server.py:108][INFO]: server ready
+[2021-01-03 09:32:24,972][server.py:92][INFO]: request info: trace_id: 8856fe4a-4d63-11eb-8928-18cf5ea622c6, client: 127.0.0.1:49400 error_code: 0, cose: 0.013993024826049805, image_url: 
+[2021-01-03 09:32:28,972][server.py:92][INFO]: request info: trace_id: 8ab93f46-4d63-11eb-8b1a-18cf5ea622c6, client: 127.0.0.1:49401 error_code: 0, cose: 0.014990806579589844, image_url: 
+[2021-01-03 09:32:53,531][server.py:98][INFO]: server init
+[2021-01-03 09:32:53,536][server.py:46][INFO]: OpenCV Servicer init.
+[2021-01-03 09:32:53,541][server.py:105][INFO]: server ready
+[2021-01-03 09:32:59,653][server.py:92][INFO]: request info: trace_id: 9d01ddc2-4d63-11eb-9f09-18cf5ea622c6, client: 127.0.0.1:49403 error_code: 0, cose: 0.015990734100341797, image_url: 
+[2021-01-03 09:33:23,352][server.py:97][INFO]: server init
+[2021-01-03 09:33:23,358][server.py:46][INFO]: OpenCV Servicer init.
+[2021-01-03 09:33:23,364][server.py:104][INFO]: server ready
+[2021-01-03 09:33:27,442][server.py:91][INFO]: request info: trace_id: ad926800-4d63-11eb-8924-18cf5ea622c6, client: 127.0.0.1:49405 error_code: 0, cose: 0.01598668098449707, image_url: 
+[2021-01-03 09:33:44,069][server.py:96][INFO]: server init
+[2021-01-03 09:33:44,074][server.py:46][INFO]: OpenCV Servicer init.
+[2021-01-03 09:33:44,079][server.py:103][INFO]: server ready
+[2021-01-03 09:33:46,880][server.py:90][INFO]: request info: trace_id: b928f43e-4d63-11eb-86be-18cf5ea622c6, client: 127.0.0.1:49408 error_code: 0, cose: 0.015007257461547852, image_url: 

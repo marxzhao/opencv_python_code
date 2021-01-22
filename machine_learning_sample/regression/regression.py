@@ -34,13 +34,18 @@ X_train, X_test, y_train, y_test = modsel.train_test_split(
     boston.data, boston.target, test_size=0.1,
     random_state=42)
 linreg.fit(X_train, y_train)
+
 linear_model.LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)
-metrics.mean_squared_error(y_train, linreg.predict(X_train))
+#预测
+y_pred = linreg.predict(X_train)
+#得到预测值的均方误差
+metrics.mean_squared_error(y_train, y_pred)
+#linreg对象的score方法返回确定系数R方值
 linreg.score(X_train, y_train)
-print(1)
+
 #测试模型
-y_pred = linreg.predict(X_test)
-metrics.mean_squared_error(y_test, y_pred)
+y_predt = linreg.predict(X_test)
+metrics.mean_squared_error(y_test, y_predt)
 
 plt.figure(figsize=(10, 6))
 plt.plot(y_test, linewidth=3, label='ground truth')
@@ -62,4 +67,11 @@ plt.text(-5, 45, errstr, fontsize=12)
 
 plt.show()
 
+#注
+"""
+线性回归 常用linreg = linear_model.LinearRegression()
 
+Lasso L1回归 lassoreg = linear_model.Lasso()
+
+ridge L2回归 ridgereg = linear_model.RidgeRegression()
+"""
