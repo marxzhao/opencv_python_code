@@ -55,13 +55,11 @@ class Servicer(opencv_pb2_grpc.OpenCVServicer):
         error_code = 0
         try:
             std, score, error_code = self.op.inference(trace_id, imagebuf, image_url)
-            print(std, score, error_code)
         except Exception as e:
             error_code = -10011
             log.logging_error(trace_id, error_code, "OpenCV server failed: {:}".format(traceback.format_exc()))
 
         response = opencv_pb2.OpenCVResponse(trace_id=trace_id, context_id=context_id, error_code=error_code)
-        print(response)
         for i in range(1):
             item = response.results.add()
             item.fscore = score
@@ -99,11 +97,8 @@ def serve(config, ip="127.0.0.1", port=5000, process_workers=1):
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=process_workers), options=[
             ('grpc.max_send_message_length', 500 * 1024 * 1024),
             ('grpc.max_receive_message_length', 500 * 1024 * 1024)])
-        print('aa', config, ip, port)
         opencv_pb2_grpc.add_OpenCVServicer_to_server(Servicer(config, ip, port), server)
-        print('dst')
         server.add_insecure_port("{:}:{:}".format(ip, port))
-        print('dst1')
         server.start()
         logging.info('server ready')
     except KeyboardInterrupt:
@@ -132,8 +127,5 @@ if __name__=="__main__":
     FLAGS, unparsed = _parse_param()
     log.init_logging('log/{}/server_{}.log'.format(FLAGS.ip, FLAGS.port),
                      verbose=FLAGS.verbose, level="INFO")
-
     config = init(FLAGS.config)
-    print(config)
-
     serve(config, FLAGS.ip, FLAGS.port, FLAGS.workers)
