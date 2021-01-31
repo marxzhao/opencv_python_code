@@ -15,7 +15,7 @@ from sklearn import linear_model
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 
-#载入数据集
+#载入波士顿数据集
 boston = datasets.load_boston()
 print(dir(boston))
 print(boston.data.shape)
@@ -29,12 +29,18 @@ target = iris.target[idx].astype(np.float32)
 
 
 #训练模型
+#定义模型
 linreg = linear_model.LinearRegression()
+#分割数据集
+
 X_train, X_test, y_train, y_test = modsel.train_test_split(
     boston.data, boston.target, test_size=0.1,
     random_state=42)
+#训练模型
 linreg.fit(X_train, y_train)
 
+
+#s使用测试集预测
 linear_model.LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)
 #预测
 y_pred = linreg.predict(X_train)
